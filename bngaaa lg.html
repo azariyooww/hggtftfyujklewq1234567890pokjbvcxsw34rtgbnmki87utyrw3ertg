@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animasi Tulisan dan Bunga Matahari</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #87CEEB; /* Warna biru langit */
+        }
+
+        #glowing-text {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ffcc00; /* Warna kuning untuk tulisan menyala */
+            text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00, 0 0 30px #ffcc00; /* Efek bayangan untuk menyala */
+        }
+
+        #sunflower-container {
+            position: relative;
+        }
+
+        #sunflower {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 50px;
+            height: 50px;
+            background: #ffd700; /* Warna kuning untuk bunga matahari */
+            border-radius: 50%;
+            transform-origin: 50% 500%; /* Menetapkan titik pusat transformasi ke bawah agar matahari terlihat seperti tumbuh dari bawah */
+            animation: sunflowerAnimation 5s linear forwards; /* Animasi tumbuh selama 5 detik */
+        }
+
+        @keyframes sunflowerAnimation {
+            0% {
+                transform: translateY(100%) scale(0);
+            }
+            100% {
+                transform: translateY(0) scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="sunflower-containe
